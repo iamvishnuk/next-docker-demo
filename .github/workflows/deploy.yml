@@ -59,10 +59,10 @@ jobs:
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           script: |
             docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
-            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+            docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
             docker stop my-nextjs-app || true
             docker rm my-nextjs-app || true
             docker run -d \
               --name my-nextjs-app \
-              -p 3000:3000 \
-              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:main
+              -p 3004:3000 \
+              ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}

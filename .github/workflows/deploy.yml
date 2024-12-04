@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-      packages: write
+      packages: write  # Explicitly grant package write permissions
     
     steps:
       - name: Checkout repository
@@ -59,10 +59,17 @@ jobs:
           username: ${{ secrets.LIGHTSAIL_USER }}
           key: ${{ secrets.LIGHTSAIL_SSH_KEY }}
           script: |
-            docker login ${{ env.REGISTRY }} -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}
+            # Login to GitHub Container Registry with explicit password method
+            docker logout ${{ env.REGISTRY }}
+            echo "${{ secrets.ACCESS_TOKEN }}" | docker login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
+            
+            # Pull the latest image
             docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:latest
-            docker stop my-nextjs-app || true
-            docker rm my-nextjs-app || true
+            
+            # Remove existing container if it exists
+            docker rm -f my-nextjs-app || true
+            
+            # Run the new container
             docker run -d \
               --name my-nextjs-app \
               -p 3004:3000 \

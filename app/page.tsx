@@ -24,6 +24,7 @@ export default function Home() {
           <li>Hello from docker</li>
           <li>Hello from Github Actions</li>
           <li>Hello from Github Actions 2</li>
+          <li>Hello from Github Actions 3</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">

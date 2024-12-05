@@ -1,0 +1,46 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "always"
+  },
+  "eslint.validate": ["javascript", "javascriptreact", "html", "typescript", "typescriptreact"],
+  "editor.accessibilitySupport": "off",
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": true,
+  "editor.wordWrap": "off",
+  "editor.fontWeight": "normal",
+  "editor.renderWhitespace": "none",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "diffEditor.wordWrap": "off",
+  "html.format.wrapLineLength": 100,
+  "launch": {
+    "configurations": [],
+    "compounds": []
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact",
+    "html": "html"
+  },
+  "files.autoSave": "onFocusChange",
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.inlineSuggest.enabled": true,
+  "css.validate": false,
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.includeLanguages": {
+    "javascript": "javascript",
+    "javascriptreact": "javascriptreact",
+    "typescript": "typescript",
+    "typescriptreact": "typescriptreact",
+    "html": "html"
+  },
+  "workbench.editorAssociations": {
+    "*.ttf": "default"
+  },
+  "git.openRepositoryInParentFolders": "never",
+  "cSpell.words": []
+}

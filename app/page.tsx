@@ -19,6 +19,8 @@ export default function Home() {
           <li>Hello from Github Actions 5</li>
           <li>Hello from Github Actions 6</li>
           <li>Hello from Github Actions 7</li>
+          <li>Hello from Github Actions 8</li>
+          <li>Hello from Github Actions 9</li>
         </ol>
 
         <div className='flex gap-4 items-center flex-col sm:flex-row'>

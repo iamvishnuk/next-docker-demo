@@ -3,6 +3,7 @@ name: Lint and Commit Checks
 on:
   pull_request:
     branches: [main]
+    types: [opened, synchronize, reopened]
 
 jobs:
   lint-and-commit-checks:

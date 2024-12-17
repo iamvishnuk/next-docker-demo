@@ -12,15 +12,8 @@ export default function Home() {
           </li>
           <li>Save and see your changes instantly.</li>
           <li>Hello from docker</li>
-          <li>Hello from Github Actions 1</li>
-          <li>Hello from Github Actions 2</li>
-          <li>Hello from Github Actions 3</li>
-          <li>Hello from Github Actions 4</li>
-          <li>Hello from Github Actions 5</li>
-          <li>Hello from Github Actions 6</li>
-          <li>Hello from Github Actions 7</li>
-          <li>Hello from Github Actions 8</li>
-          <li>Hello from Github Actions 9</li>
+          <li>Hello from Nginx</li>
+          <li>Hello from Github actions</li>
         </ol>
 
         <div className='flex gap-4 items-center flex-col sm:flex-row'>
